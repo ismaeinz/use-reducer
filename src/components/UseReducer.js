@@ -1,6 +1,4 @@
 import React, { useReducer } from "react";
-import Props from "./components/Props";
-
 const reducer = (state, action) => {
   switch (action.type) {
     case "increment":
@@ -17,8 +15,8 @@ const reducer = (state, action) => {
   }
 };
 
-export const initialState = { count: 0, userInput: "", color: false };
-const App = () => {
+const initialState = { count: 0, userInput: "", color: false };
+const UseReducer = () => {
   // useReducer
   const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -74,9 +72,8 @@ const App = () => {
       <br />
       <br />
       <p>{state.userInput}</p>
-      <Props state={state} />
     </main>
   );
 };
 
-export default App;
+export default UseReducer;
